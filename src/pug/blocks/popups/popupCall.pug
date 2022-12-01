@@ -1,0 +1,26 @@
+div(class=ClassPopupCall id=popupCall__mainID)
+	.container
+		div(class=ClassPopupCallBtnWrapper)
+			button(class=ClassCallButtonClose type=button id=popupCallButtonCLoseID)
+				span Закрыть
+		if mainPage
+			form(class='js-formPopup' action='php/form/formPopup.php' name=popupCallName method=post class=ClasspopupCallForm id=popupCallID)
+				div(class=ClassPopupCall__wrapper)
+					div(class='inputs')
+						input(class='input' type="text", placeholder='Name', name='username', value='' required)
+						input(class='input' type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
+					div(class='wrapperButton')
+						button(class=ClassMainForm__button+' button-more' type=submit id='getCall')= 'Заказать звонок'
+					p(class='mainForm-polite') нажимая кнопку 'Заказать звонок', вы соглашаетесь с нашей 
+						a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности
+
+		if anotherPage
+			form(class='js-formPopup' action='../php/form/formPopup.php' name=popupCallName method=post class=ClasspopupCallForm id=popupCallID)
+				div(class=ClassPopupCall__wrapper)
+					div(class='inputs')
+						input(class='input' type="text", placeholder='Name', name='username', value='' required)
+						input(class='input' type="text", placeholder='Telephone', name='userphone', value='' data-mask="tel" required)
+					div(class='wrapperButton')
+						button(class=ClassMainForm__button+' button-more' type=submit id='getCall')= 'Заказать звонок'
+					p(class='mainForm-polite') нажимая кнопку 'Заказать звонок', вы соглашаетесь с нашей 
+						a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности

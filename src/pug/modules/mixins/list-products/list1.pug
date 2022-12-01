@@ -1,0 +1,11 @@
+mixin list1(id, ...items)
+    ul(id=id)
+        each item in items
+            li(class=listItem1)
+                a(class=listLink1)= item
+
+mixin ul(className, ...items)
+    ul(class=className)
+        each item in items
+            li(class=className+'__item')
+                a(class=className+'__link')= item

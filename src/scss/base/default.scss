@@ -1,0 +1,271 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include font-smoothing(on);
+  font-family: $Montserrat, $Syncopate, 'Arial', sans-serif;
+  min-width: 320px;
+
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+.main {
+	overflow: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1580px;
+  padding: 0 1rem;
+  margin: 0 auto;
+
+  @include media('>=phone-lg') {
+		padding: 0 2rem;
+	}
+}
+
+// Scroll
+.scroll-wrap::-webkit-scrollbar {
+  width: 3px;
+  background-color: #ccc;
+}
+
+.scroll-wrap::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+
+img {
+  content-visibility: auto;
+}
+
+.overlay {
+  display: none;
+  opacity: 0;
+  background-color: $black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 111;
+  position: absolute;
+}
+
+.overlay.active {
+  display: block;
+  position: fixed;
+  opacity: 0.6;
+  width: 100vw;
+  height: 100vh;
+  transition: $base-transition;
+}
+
+button.btnclose {
+  display: none;
+  opacity: 1;
+  transition: $base-transition;
+  z-index: 120;
+}
+
+.spanbtnclose {
+  width: 30px;
+  height: 2px;
+  background-color: $white;
+  position: fixed;
+  z-index: 222;
+  top: 50px;
+  left: 50px;
+
+
+  &:first-of-type {
+      transform: rotate(45deg);
+  }
+  &:last-of-type {
+      transform: rotate(-45deg);
+  }
+}
+
+body.overflow-hidden {
+  overflow: hidden;
+  width: calc(100% - 17px);
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: $white;
+
+  @include media(">=tablet") {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+%pseudo {
+  display: block;
+  position: absolute;
+  content: '';
+}
+
+.outerWrapper {
+    height: 100vh;
+    background-color: black;
+}
+.stop-scroll {
+    overflow: hidden;
+}
+.overflowY {
+    height: 500vh;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+}
+.blocks-wrapper {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.invalid {
+	border: 2px solid $red;
+}
+
+.valid {
+	border: 2px solid $green;
+}
+
+input.valid:focus {
+	border: 2px solid $green;
+}
+
+input.invalid:focus {
+	border: 2px solid $red;
+}
+
+// .lazy_content {
+// 	display: none;
+// 	opacity: 0;
+// }
+
+.block {
+	display: block;
+	opacity: 1;
+	transition: $base-transition;
+}
+
+.mainPolitePage {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @include media('>=phone-lg') {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  @include media('>=tablet') {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  @include media('>=desktop') {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
+
+  @include media('>=widescreen-lg') {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+  }
+
+  h1 {
+    padding-bottom: 1rem;
+    font-size: 2.6rem;
+
+    @include media('>=phone-lg') {
+    	font-size: 3.6rem;
+    }
+  
+    @include media('>=tablet') {
+		padding-bottom: 2rem;
+    	font-size: 4.6rem;
+    }
+  
+    @include media('>=desktop') {
+      padding-bottom: 3rem;
+      font-size: 5.6rem;
+    }
+  }
+
+  ul {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+
+    @include media('>=phone-lg') {
+    	font-size: 2rem;
+    }
+  
+    @include media('>=tablet') {
+		margin-bottom: 2rem;
+    	font-size: 2.8rem;
+    }
+  
+    @include media('>=desktop') {
+    	font-size: 3.8rem;
+    }
+  }
+
+  li, p {
+	font-size: 1.5rem;
+    margin-bottom: 1rem;
+
+    @include media('>=phone-lg') {
+    	font-size: 1.8rem;
+    }
+  
+    @include media('>=tablet') {
+		margin-bottom: 2rem;
+    	font-size: 2.5rem;
+    }
+  
+    @include media('>=desktop') {
+    	font-size: 3rem;
+    }
+  }
+
+  li {
+    padding-left: 1rem;
+
+	@include media('>=tablet') {
+		padding-left: 2rem;
+    }
+
+    &:first-of-type {
+      margin-top: 1rem;
+
+	  @include media('>=tablet') {
+		margin-bottom: 2rem;
+    }
+    }
+	
+	p {
+		padding-left: 1rem;
+
+		@include media('>=tablet') {
+			padding-left: 2rem;
+		}
+	}
+  }
+}

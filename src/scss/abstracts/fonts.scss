@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'MontserratThin';
+    src: url('../fonts/Montserrat-Thin.woff2') format('woff2'), 
+       url('../fonts/Montserrat-Thin.woff') format('woff'),
+       url('../fonts/Montserrat-Thin.ttf')  format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.woff2') format('woff2'), 
+       url('../fonts/Montserrat-Regular.woff') format('woff'),
+       url('../fonts/Montserrat-Regular.ttf')  format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Italic';
+    src: url('../fonts/Montserrat-Italic.woff2') format('woff2'), 
+       url('../fonts/Montserrat-Italic.woff') format('woff'),
+       url('../fonts/Montserrat-Italic.ttf')  format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../fonts/Montserrat-Bold.woff2') format('woff2'), 
+       url('../fonts/Montserrat-Bold.woff') format('woff'),
+       url('../fonts/Montserrat-Bold.ttf')  format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Syncopate';
+    src: url('../fonts/Syncopate-Regular.woff2') format('woff2'), 
+       url('../fonts/Syncopate-Regular.woff') format('woff'),
+       url('../fonts/Syncopate-Regular.ttf')  format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Syncopate-Bold';
+    src: url('../fonts/Syncopate-Bold.woff2') format('woff2'), 
+       url('../fonts/Syncopate-Bold.woff') format('woff'),
+       url('../fonts/Syncopate-Bold.ttf')  format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazzardH-Regular';
+    src: url('../fonts/MazzardH-Regular.woff2') format('woff2'), 
+       url('../fonts/MazzardH-Regular.woff') format('woff'),
+       url('../fonts/MazzardH-Regular.ttf')  format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MazzardH-Bold';
+    src: url('../fonts/MazzardH-Bold.woff2') format('woff2'), 
+       url('../fonts/MazzardH-Bold.woff') format('woff'),
+       url('../fonts/MazzardH-Bold.ttf')  format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

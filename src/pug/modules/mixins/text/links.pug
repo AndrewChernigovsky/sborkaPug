@@ -1,0 +1,15 @@
+//- links
+mixin aLink(urlLink, className, ...links)
+    each link in links
+        a(href=urlLink, class=className)= link
+
+mixin a(urlLink, text)
+    a(href=urlLink, class=base__text+base__link)= text
+
+mixin aClassName(className, urlLink, text)
+    a(href=urlLink, class=base__text+base__link+' '+className)= text
+
+//- buttons
+
+mixin button(type, text)
+    button(type=type)= text

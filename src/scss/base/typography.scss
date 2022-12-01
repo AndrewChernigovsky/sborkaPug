@@ -1,0 +1,112 @@
+.main-title {
+  font-size: 3rem;
+}
+
+.section-title {
+  font-size: 2rem;
+}
+
+.base-text {
+  font-size: 1.6rem;
+}
+
+.title-third {
+  font-size: 2rem;
+}
+
+.title-default {
+  margin-bottom: 2rem;
+}
+
+.title__h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+
+  @include media(">=phone") {
+    font-size: 3rem;
+  }
+
+  @include media('>=tablet') {
+    font-size: 4.2rem;
+    margin-bottom: 2rem;
+  }
+  @include media('>=desktop') {
+    font-size: 6.6rem;
+    margin-bottom: 3rem;
+  }
+  @include media('>=widescreen-lg') {
+    font-size: 9.6rem;
+  }
+}
+
+.title__h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-family: $MontserratBold;
+
+  @include media('>=tablet') {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+  @include media('>=desktop') {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+  }
+  @include media('>=widescreen-lg') {
+    font-size: 5.6rem;
+  }
+}
+
+.title__h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+
+  @include media('>=tablet') {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  @include media('>=desktop') {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.quzieParagraph {
+  font-size: 1.2rem;
+}
+
+.paragraph-base {
+  font-size: 1.6rem;
+  font-family: $Montserrat;
+
+  @include media('>=tablet') {
+    font-size: 1.6rem;
+  }
+  @include media('>=desktop') {
+    font-size: 2.1rem;
+  }
+}
+
+.base-link {
+  cursor: pointer;
+  transition: $base-transition;
+
+  &:hover {
+    color: $orange;
+  }
+  &:visited {
+    color: $orange;
+  }
+  &:active {
+    color: $orange;
+    border-bottom: 1px solid $orange;
+  }
+}
+
+.color-white {
+  color: $white;
+}
+
+.color-black {
+  color: $black;
+}

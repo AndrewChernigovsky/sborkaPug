@@ -1,0 +1,94 @@
+.form {
+    max-width: 300px;
+}
+
+.form-wrapper {
+    display: grid;
+    gap: 1rem;
+}
+
+.formLabel,
+.formInput,
+.buttonFormSubmit {
+    font-size: 1.8rem;
+}
+.formLabel,
+.buttonFormSubmit {
+    color: $white;
+}
+.formInput {
+    color: $black;
+}
+.buttonFormSubmit {
+    border: 1px solid $white;
+    padding: 1rem;
+    transition: $base-transition;
+    margin-top: 2rem;
+
+    &:hover {
+        color: $orange;
+        border: 1px solid $orange;
+    }
+}
+.input-mainWrapper {
+    display: grid;
+    gap: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.input-RadioBtn {
+    min-width: 100%;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: $base-transition;
+    z-index: 1;
+    cursor: pointer;
+    &:hover {
+        .formLabel::after {
+            opacity: 0.8;
+        }
+    }
+}
+.input-RadioBtn:checked  + .formLabel::after {
+    background: linear-gradient($red, $red1);
+    background: linear-gradient($blue1, $green);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid $green2;
+    opacity: 1;
+    right: 0;
+    transition: $base-transition;
+}
+
+.formLabel {
+    cursor: pointer;
+    min-height: 30px;
+    line-height: 30px;
+    max-width: calc(300px - 25px);
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: linear-gradient($red, $blue2);
+
+        border: 2px solid $blue2;
+        opacity: 0.4;
+        right: 0;
+        top: 0;
+        transition: $base-transition;
+        cursor: pointer;
+    }
+}

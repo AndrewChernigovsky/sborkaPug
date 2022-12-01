@@ -1,0 +1,304 @@
+.footer {
+	padding-top: 2rem;
+	color: $black;
+	font-family: $Montserrat;
+
+	&__wrapper {
+		display: grid;
+		min-width: 100%;
+	}
+
+	&__inner {
+		display: flex;
+		min-width: 100%;
+		max-width: calc(100% - 37px);
+		justify-content: space-between;
+		margin-bottom: -1rem;
+		padding: 0.5rem 2rem 0 2rem;
+		position: relative;
+
+		@include media('>=phone-lg') {
+			display: flex;
+		}
+
+		@include media('>=desktop') {
+			padding: 3rem 0 0 0;
+		}
+	}
+
+	&__block {
+		display: grid;
+		align-content: flex-start;
+
+		&-company {
+			font-size: 0.8rem;
+
+			@include media('>=phone-lg') {
+				font-size: 1.2rem;
+			}
+	
+			@include media('>=desktop') {
+				font-size: 2.4rem;
+			}
+		}
+
+		&-polite,
+		&-telephone {
+			cursor: pointer;
+			color: $white;
+			height: min-content;
+		}
+
+		&-polite {
+			font-size: 0.8rem;
+			font-family: $MontserratItalic;
+			border-bottom: 1px solid $white;
+			white-space: nowrap;
+
+			@include media('>=phone-lg') {
+				font-size: 1rem;
+			}
+	
+			@include media('>=desktop') {
+				font-size: 2.4rem;
+			}
+
+			&:hover {
+				transition: $base-transition;
+				border-bottom: 1px solid transparent;
+			}
+		}
+
+		&-telephone {
+			font-size: 1.4rem;
+			font-family: $MontserratBold;
+			margin-bottom: 2px;
+
+			@include media('>=phone-lg') {
+				font-size: 1.6rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 3.8rem;
+			}
+
+			&:hover {
+				transition: $base-transition;
+				opacity: 0.6;
+			}
+		}
+
+		&:first-of-type {
+			margin-bottom: 2.5rem;
+
+			@include media('>=phone-lg') {
+				margin-bottom: 5.5rem;
+			}
+
+			@include media('>=widescreen-lg') {
+				margin-bottom: 7.5rem;
+			}
+		}
+	}
+
+	&__line {
+		position: relative;
+		background-color: $white;
+		height: 1px;
+		max-width: calc(100% - 37px);
+		margin-top: -20px;
+
+		@include media('>=widescreen-lg') {
+			max-width: calc(100% - 60px);
+		}
+
+		@include media('>=1880px') {
+			max-width: calc(100% - 310px);
+		}
+
+		&::before,
+		&::after {
+			@extend %pseudo;
+			width: 1px;
+			height: 16px;
+			background-color: $white;
+			top: 0px;
+			transform: rotate(0deg);
+
+			@include media('>=desktop') {
+				top: 0px;
+				height: 30px;
+			}
+
+			@include media('>=widescreen-lg') {
+				
+			}
+		}
+
+		&::before {
+			left: -1px;
+
+			@include media('>=desktop') {
+				left: 0px;
+			}
+		}
+
+		&::after {
+			right: -1px;
+
+			@include media('>=desktop') {
+				right: 0px;
+			}
+		}
+	}
+
+	.logo {
+		height: 30px;
+		margin-left: -2px;
+		opacity: 50%;
+
+		@include media('>=phone-lg') {
+			height: 50px;
+		}
+
+		img {
+			height: 30px;
+
+			@include media('>=phone-lg') {
+				height: auto;
+			}
+		}
+
+		a {
+			width: 50px;
+			height: 30px;
+
+			@include media('>=desktop') {
+				width: 150px;
+				height: 150px;
+			}
+		}
+
+		svg {
+			width: 50px;
+			height: 40px;
+		}
+
+		@include media('>=desktop') {
+			width: 150px;
+			height: 150px;
+
+			svg {
+				width: 150px;
+				height: 150px;
+			}
+		}
+	}
+}
+
+.navFooter {
+	min-width: 100%;
+	padding-top: 1rem;
+
+	@include media('>=phone-lg') {
+		padding: 2rem 2.5rem 1rem 2.5rem;
+	}
+	@include media('>=desktop') {
+		padding: 4rem 5rem 1rem 5rem;
+	}
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		flex-wrap: wrap;
+		min-width: 100%;
+
+		@include media('>=phone-lg') {
+		}
+
+		@include media('>=desktop') {
+			font-size: 2.6rem;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		@include media('>=widescreen-lg') {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	&__item {
+		margin: 0 auto;
+		padding: 0 0.5rem;
+
+		@include media('>=desktop') {
+		}
+	}
+	&__link {
+		color: $white;
+		font-family: $Montserrat;
+		font-size: 0.6rem;
+		border-width: 0;
+		border-bottom: 1px solid transparent;
+		position: relative;
+		transition: all 0.25s linear;
+		padding-bottom: 10px;
+
+		@include media('>=395px') {
+			font-size: 0.8rem;
+		}
+		@include media('>=phone-lg') {
+			font-size: 1rem;
+		}
+		@include media('>=tablet') {
+			font-size: 1.4rem;
+		}
+
+		@include media('>=desktop') {
+			font-size: 2rem;
+		}
+
+		@include media('>=widescreen-lg'){
+			font-size: 2.6rem;
+		}
+
+		&::before {
+			@extend %pseudo;
+			width: 100%;
+			left: 0;
+			height: 1px;
+			background-color: $white;
+			transform-origin: left;
+			transform: scale(0);
+			transition: 0.25s linear;
+			bottom: 0;
+		}
+
+		&:visited {
+			color: $white;
+		}
+
+		&:hover::before,
+		&:active::before {
+			transform: scale(1);
+		}
+	}
+}
+
+.a__link.active {
+	opacity: 0.4;
+	cursor: auto;
+
+	&:hover::before,
+	&:focus::before {
+		transform: scale(0);
+	}
+}
+
+.footer.politeFooter {
+	padding-top: 4rem;
+
+	@include media('>=desktop') {
+		padding-top: 10rem;
+	}
+}

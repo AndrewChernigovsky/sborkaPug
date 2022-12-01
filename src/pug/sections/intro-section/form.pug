@@ -1,0 +1,14 @@
+if mainPage
+	form(class=ClassintroSectionForm+ ' js-form' id=introFormID name=introFormName action='php/form/form.php' method=post)
+		div(class=ClassintroSectionForm__Wrapper)
+			div(class=ClassintroSectionForm__Inner)
+				input(type="text" placeholder='Name' name='username' value='' maxlength='20' minlenght='3' required)
+				input(type="text" placeholder='Telephone' name='userphone' value='' data-mask="tel" required)
+			button(class=ClassintroForm__button+colorTextBWhite type=submit id=introSubmit)= 'Проконсультироваться'
+if !mainPage
+	form(class=ClassintroSectionForm+ ' js-form' id=introFormID name=introFormName action='../php/form/form.php' method=post)
+		div(class=ClassintroSectionForm__Wrapper)
+			div(class=ClassintroSectionForm__Inner)
+				input(type="text" placeholder='Name' name='username' value='' maxlength='20' minlenght='3' required)
+				input(type="text" placeholder='Telephone' name='userphone' value='' data-mask="tel" required)
+			button(class=ClassintroForm__button+colorTextBWhite+ ' js-form-submit' type=submit id=introSubmit)= 'Проконсультироваться'

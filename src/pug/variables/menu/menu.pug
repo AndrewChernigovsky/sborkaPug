@@ -1,0 +1,44 @@
+- let navClass = menu + ' ' + nav + ' ' + jsBurger
+- let menuWrapper = menu + '__' + wrapper
+- let menuInner = menu + '__' + inner
+- let menuList = menu + '__' + list
+- let navList = nav + '__' + list
+- let navItem = menu + '__' + nav + '-' + item
+- let navLink = menu + '__' + nav + '-' + link
+
+-
+	let navUlClasses= [
+	menuList,
+	navList
+	]
+
+-
+	let menuClasses= [
+	// 0
+	navClass,
+	// 1
+	menuWrapper,
+	// 2
+	menuInner,
+	// 3
+	navUlClasses,
+	// 4
+	navItem,
+	// 5
+	navLink
+	]
+
+- let urlIndex = urlPath.urlPathMenuFromIndex + urlLinkMenu[0]
+- let urlArticles = urlPath.urlPathMenuFromIndex + urlLinkMenu[1]
+- let urlCompany = urlPath.urlPathMenuFromIndex + urlLinkMenu[2]
+- let urlMarketing = urlPath.urlPathMenuFromIndex + urlLinkMenu[3]
+- let urlWebbuilding = urlPath.urlPathMenuFromIndex + urlLinkMenu[4]
+- let urlContacts = urlPath.urlPathMenuFromIndex + urlLinkMenu[5]
+- let urlPhone = 'tel:+79999999999'
+
+-
+	let menuItems= [
+		{title: 'Услуги', url: urlArticles},
+		{title: 'Контакты', url: urlContacts},
+		{title: '8(999)999-99-99', url: urlPhone},
+	]

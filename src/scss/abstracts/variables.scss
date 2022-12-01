@@ -1,0 +1,65 @@
+// Breakpoints
+$breakpoints: (
+  'phone-sm': 320px,
+  'phone-md': 375px,
+  'phone': 480px,
+  'phone-lg': 576px,
+  'tablet': 768px,
+  'tablet-lg': 992px,
+  'desktop': 1024px,
+  'widescreen': 1200px,
+  'widescreen-md': 1360px,
+  'widescreen-lg': 1440px,
+  'widescreen-full': 1600px,
+  'full-hd': 1920px,
+);
+
+// Colors
+$black: #000000;
+$white: #FFFFFF;
+$border: #CCCCCC;
+$success: #28A745;
+$warning: #FFC117;
+$error: #DC3545;
+
+// Fonts
+$MontserratThin: 'MontserratThin';
+$Montserrat: 'Montserrat';
+$MontserratItalic: 'Montserrat-Italic';
+$MontserratBold: 'Montserrat-Bold';
+$Syncopate: 'Syncopate';
+$SyncopateBold: 'Syncopate-Bold';
+$MazzardH: 'MazzardH-Regular';
+$MazzardHBold: 'MazzardH-Bold';
+// Other
+$base-transition: all 0.3s ease;
+
+$blue: #1826B0;
+$blue1: #2E3784;
+$blue2: #081272	;
+$blue3: #4C59D8;
+$blue4: #717BD8;
+$darkblue: #110b21;
+$darkblue1: #0f008f;
+$darkblue2: #0c0014;
+
+$orange: #FFB700;
+$orange1: #FF710B;
+// $orange2: #A65A00;
+// $orange3: #FFA840;
+// $orange4: #FFBF73;
+// $orange5: #fdda00;
+// $orange6: #ff7600;
+
+$red: #ff1b50;
+$red1: #94002D;
+
+$green: #00CC00;
+$green1: #008500;
+$green2: #39E639;
+
+$gray: #CCCCCC;
+$gray1: #D9D9D9;
+
+$crem1: #FFF0C9;
+$crem2: #FFDBC1;

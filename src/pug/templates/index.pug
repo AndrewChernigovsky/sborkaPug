@@ -1,0 +1,16 @@
+extends ../layout/main.pug
+include ../modules/mixins/mixins
+
+block variables
+	include ../abstraction/variables
+	//- - let mainPage = true
+block head
+	include ../partials/head/head
+block content
+	include ../sections/header/header
+	main(class=main+' container')
+		include ../sections/intro-section/intro-section
+block footer
+	include  ../sections/footer/footer
+//- block templates
+//- 	include  ../blocks/popups/popupCall

@@ -1,0 +1,136 @@
+.intro-section {
+	padding-top: 2rem;
+	padding-bottom: 3rem;
+	min-height: 300px;
+
+	&__wrapper {
+		position: relative;
+		display: grid;
+		justify-content: flex-start;
+		margin: 0 auto;
+		margin-top: 160px;
+
+		@include media('>=phone-lg') {
+			margin-top: 120px;
+		}
+
+		@include media('>=desktop') {
+			justify-content: center;
+			margin-top: 0;
+			display: block;
+		}
+	}
+	&__wrapper.mainPageIntroSectionWrapper {
+		margin-top: 119px;
+		padding-left: 0;
+
+		@include media('>=desktop') {
+			margin-top: 7px;
+		}
+
+		.title__h1 {
+			margin-bottom: 1rem;
+
+			@include media('>=desktop') {
+				margin-bottom: 2.5rem;
+			}
+		}
+	}
+
+	&__inner {
+		display: grid;
+		justify-content: space-between;
+		align-items: center;
+
+		@include media('>=desktop') {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+	&__text {
+		color: $black;
+	}
+
+	ul.intro-section__text {
+		li.title__h3{
+			padding-left: 2rem;
+		}
+
+		li.special {
+			padding-left: 4rem;
+		}	
+	}
+	&__title {
+		font-family: $MazzardHBold;
+		font-size: 2.4rem;
+
+		@include media('>=tablet') {
+			font-size: 3.6rem;
+		}
+
+		@include media('>=desktop') {
+			font-size: 5.6rem;
+		}
+
+		@include media('>=widescreen-lg') {
+			font-size: 9.6rem;
+		}
+	}
+	.title__h1 {
+		padding-bottom: 0;
+		text-transform: uppercase;
+		margin-bottom: 0.5rem;
+
+		@include media('>=desktop') {
+			margin-bottom: -4.5rem;
+		}
+	}
+
+	&__image-wrapper {
+		max-width: 200px;
+
+		@include media('>=phone-md') {
+			max-width: 250px;
+		}
+		@include media('>=phone') {
+			max-width: 300px;
+		}
+		@include media('>=phone-lg') {
+			max-width: 400px;
+		}
+		@include media('>=tablet') {
+			max-width: 550px;
+		}
+		@include media('>=desktop') {
+			max-width: 650px;
+		}
+	}
+
+	&__intro {
+		display: grid;
+		gap: 2rem;
+		margin-bottom: 1rem;
+
+		@include media('>=widescreen') {
+			display: flex;
+		}
+	}
+
+	&__text {
+		margin-right: 1rem;
+	}
+
+	&__about {
+		margin-bottom: 2rem;
+	}
+
+	&__map {
+		min-width: 10%;
+
+		iframe {
+			min-width: 100%;
+			max-width: max-content;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+extends form-layout
+
+block form
+    form(class=formName name=formName action=formAction id=formID)
+        div(class= formWrapper)
+            block inputs
+                label(class=label for=inputPhone) Введите ваш телефон
+                input(class=input type=typeText  id=inputPhone name='phone')
+                label(class=label for=inputEmail) Введите ваш email
+                input(class=input type=typeText id=inputEmail name='email')

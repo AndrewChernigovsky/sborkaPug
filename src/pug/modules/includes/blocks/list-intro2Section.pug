@@ -1,0 +1,4 @@
+ul(class=classListItro2Section)
+	for val in urlLinkListIntro2Section
+		li(class=classListItro2Section+'__item')
+			+aLink(val.url, classListItro2Section+'__link', val.title)

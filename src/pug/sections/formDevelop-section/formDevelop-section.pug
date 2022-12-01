@@ -1,0 +1,61 @@
+-   let formDevelopbutton=true
+
+if mainPage
+	section(class=formDevelop)
+if seoPage
+	section(class=formDevelop+' seoPage')
+		.container
+				div(class=formDevelopSectionWrapper)
+					div(class='formDevSec-Inner')
+						div(class='formDevSec-Inner2')
+							if seoPage
+								h2(class=titleDefault__H2) Хотите увеличить поток клиентов?
+							p(class=formDevelopText)
+								span easeweb
+								span= ' поможет'
+								form(class=ClassformDevelop + ' js-form2' id='formDevelopID' name=introFormName action='php/form/form.php' method=post)
+									div(class=ClassformDevelop__Wrapper)
+										div(class=ClassformDevelop__Inner)
+											input(class='js-input-phone' type="text" placeholder='Telephone' name='userphone' value='' data-mask="tel" required)
+											include ../../blocks/button
+								p(class='mainForm-polite') нажимая кнопку 'Позвоните мне', вы соглашаетесь с нашей 
+									a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности
+
+if developPage
+	section(class=formDevelop+' developPage')
+		.container
+				div(class=formDevelopSectionWrapper)
+					div(class='formDevSec-Inner')
+						div(class='formDevSec-Inner2')
+							h2(class=titleDefault__H2) Нужен продающий сайт?
+							p(class=formDevelopText)
+								span easeweb
+								span= ' поможет'
+								form(class=ClassformDevelop + ' js-form2' id='formDevelopID' name=introFormName action='../php/form/form.php' method=post)
+									div(class=ClassformDevelop__Wrapper)
+										div(class=ClassformDevelop__Inner)
+											input(class='js-input-phone' type="text" placeholder='Telephone' name='userphone' value=''  data-mask="tel" required)
+											include ../../blocks/button
+							p(class='mainForm-polite') нажимая кнопку 'Позвоните мне', вы соглашаетесь с нашей 
+								a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности
+						div(class='formDevelop__imageWrapper')
+							video(autoplay loop muted)
+								source(src="/video/somethingGif.webm" type="video/webm")
+								source(src="/video/somethingGif.mp4" type="video/mp4")
+if addTasksPage
+	section(class=formDevelop+' addTasksPage')
+		.container
+			div(class=formDevelopSectionWrapper)
+				div(class='formDevSec-Inner')
+					div(class='formDevSec-Inner2')
+						h2(class=titleDefault__H2) Хотите увеличить поток клиентов?
+						p(class=formDevelopText)
+							span easeweb
+							span= ' поможет'
+							form(class=ClassformDevelop + ' js-form2' id='formDevelopID' name=introFormName action='../php/form/form.php' method=post)
+								div(class=ClassformDevelop__Wrapper)
+									div(class=ClassformDevelop__Inner)
+										input(class='js-input-phone' type="text" placeholder='Telephone' name='userphone' value=''  data-mask="tel" required)
+										include ../../blocks/button
+						p(class='mainForm-polite') нажимая кнопку 'Позвоните мне', вы соглашаетесь с нашей 
+							a(class='mainForm-polite-link' href='../pages/polite.html') политикой конфиденциальности

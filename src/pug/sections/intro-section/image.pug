@@ -1,0 +1,46 @@
+if mainPage
+	div(class=ClassintroSection__imageWrapper + ' mainPageImageWrapper')
+		video(autoplay loop muted)
+			source(src="/video/logoGif.webm" type="video/webm")
+			source(src="/video/logoGif.mp4" type="video/mp4")
+
+if seoPage
+	div(class=ClassintroSection__imageWrapper + ' seoSectionimage')
+		video(width='inherit' autoplay loop muted)
+			source(src="../video/planeGif.webm" type="video/webm")
+			source(src="../video/planeGif.mp4" type="video/mp4")
+if developPage
+	div(class=ClassintroSection__imageWrapper + ' developSectionimage')
+		+pictureClassNamePng(
+			ClassintroSection__image,
+			'image-computer',
+			webp,
+			"/images/content/computer",
+			"/images/content/computer",
+			loading=''
+		)
+		+pictureClassNamePng(
+			ClassintroSection__image+' anima',
+			'image-zvetok',
+			webp,
+			"/images/content/zvetok",
+			"/images/content/zvetok",
+			loading=''
+		)
+		+pictureClassNamePng(
+			ClassintroSection__image+' anima',
+			'image-computer',
+			webp,
+			"/images/content/keyboard",
+			"/images/content/keyboard",
+			loading=''
+		)
+if addTasksPage
+	div(class=ClassintroSection__imageWrapper + ' addTasksImage')
+		+pictureClassNamePng(
+			ClassintroSection__image,
+			'image-site',
+			webp,
+			"/images/content/ruka",
+			"/images/content/ruka",
+		)

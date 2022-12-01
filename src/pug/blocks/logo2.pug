@@ -1,0 +1,18 @@
+div(class=logoClasses[0])
+	a(class=logoClasses[1] href="#no__scroll")
+		if mainPage
+			+pictureClassNamePng(
+				'',
+				'logo-image',
+				webp,
+				'../../images/content/png/logoGifPng',
+				'../../images/content/png/logoGifPng'
+				)
+		if !mainPage
+			+pictureClassNamePng(
+				'',
+				'logo-image',
+				webp,
+				'../../images/content/png/logoGifPng',
+				'../../images/content/png/logoGifPng'
+			)

@@ -1,0 +1,387 @@
+.formDevelop {
+    &__wrapper{
+        color: $black;
+        min-width: 100%;
+		max-width: 100%;
+		box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, 0.13);
+		border-radius: 15px;
+		padding: 1rem;
+
+        .button-more {
+            border-radius: 0;
+            min-width: 120px;
+            height: 30px;
+            padding-right: 3rem;
+			flex-basis: 50%;
+			padding-left: 0;
+			margin-left: 1rem;
+			padding-top: 0.2rem;
+
+			@include media('>=phone-lg') {
+				padding-right: 3rem;
+			}
+
+			@include media('>=desktop') {
+				height: 70px;
+				min-width: 260px;
+				margin-left: 2rem;
+				padding-left: 1rem;
+				padding-top: 1.5rem;
+				padding-right: 4.7rem;
+			}
+
+			&::after {
+				height: 10px;
+				top: 5px;
+
+				@include media('>=desktop') {
+					height: 33px;
+					top: 22px;
+				}
+			}
+        }
+    }
+
+	.formDevSec-Inner {
+		padding: 1rem;
+		border-radius: 15px;
+		box-shadow: 1px 2px 2px 1px  rgba(0, 0, 0, 0.07), 0px 0px 0px 1px rgba(0, 0, 0, 0.07);
+
+		@include media('>=phone-lg') {
+			padding: 3rem;
+		}
+		@include media('>=desktop') {
+			padding: 5rem;
+		}
+		@include media('>=widescreen-lg') {
+			padding: 8.7rem 10rem 8rem 13rem;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.title__h2 {
+			font-size: 1.5rem;
+
+			@include media('>=tablet') {
+				font-size: 2.5rem;
+			}
+
+			@include media('>=desktop') {
+				font-size: 5.6rem;
+			}
+		}
+	}
+
+    &__inner {
+        display: flex;
+		justify-content: flex-start;
+		max-width: inherit;
+
+        input{
+            height: 30px;
+			max-width: 50%;
+            font-size: 1.2rem;
+            font-family: $Montserrat;
+			flex-basis: 50%;
+			padding: 0.5rem;
+			border: 1px solid $black;
+
+			@include media('>=desktop') {
+				height: 70px;
+				flex-basis: 50%;
+				font-size: 2.4rem;
+				border: 2px solid $black;
+			}
+        }
+    }
+
+    &__text{
+        margin-bottom: 0.5rem;
+
+		@include media('>=desktop') {
+			margin-bottom: 3.5rem;
+		}
+
+        span {
+            font-size: 1.2rem;
+            font-family: $Montserrat;
+
+			@include media('>=desktop') {
+				font-size: 2.4rem;
+			}
+
+            &:first-of-type {
+                text-transform: uppercase;
+            }
+        }
+    }
+
+	&__imageWrapper {
+		display: none;
+
+		@include media('>=widescreen-lg') {
+			display: block;
+			width: 300px;
+		}
+
+		video {
+			width: 300px;
+		}
+	}
+
+	.mainForm-polite-link {
+
+		&:visited {
+			color: $black;
+		}
+	}
+}
+
+.formDevelop.seoPage {
+	.formDevSec-Inner .title__h2 {
+		margin-bottom: 0.5rem;
+		font-family: $MazzardHBold;
+
+		@include media(">=phone-lg") {
+			font-size: 2.2rem;
+			margin-bottom: 1.5rem;
+		}
+
+		@include media(">=tablet") {
+			font-size: 3.2rem;
+			margin-bottom: 2.5rem;
+		}
+		@include media(">=desktop") {
+			font-size: 4.6rem;
+			margin-bottom: 4.5rem;
+		}
+		@include media(">=widescreen-lg") {
+			font-size: 5.6rem;
+		}
+	}
+	.formDevSec-Inner  {
+
+		input {
+			flex-basis: auto;
+			min-width: 47%;
+
+			@include media(">=desktop") {
+				font-size: 2.4rem;
+				height: 70px;
+			}
+
+			@include media(">=widescreen-lg") {
+				min-width: 51%;
+			}
+		}
+
+		.button-more {
+			flex-basis: auto;
+			text-align: left;
+			min-width: 49%;
+			padding-left: 1rem;
+			padding-right: 1rem;
+
+			&::after {
+				top: 10px;
+			}
+
+			@include media(">=phone-lg") {
+				font-size: 1.6rem;
+				height: 30px;
+				padding-right: 3rem;
+	
+				&::after {
+					height: 30px;
+					top: 8px;
+				}
+			}
+	
+			@include media(">=tablet") {
+				min-width: 30%;
+			}
+
+			@include media(">=desktop") {
+				font-size: 2.4rem;
+				height: 70px;
+
+				&::after {
+					top: 22px;
+				}
+			}
+
+			@include media(">=widescreen-lg") {
+				min-width: 28%;
+				margin-left: 3rem;
+				padding-left: 2rem;
+
+				&::after {
+					right: -6px;
+					top: 19px;
+					height: 36px;
+				}
+			}
+		}
+	}
+	.formDevelop__wrapper {
+		padding: 1rem;
+	}
+	.formDevelop__text {
+		@include media(">=phone-lg") {
+			span {
+				font-size: 1.6rem;
+			}
+		}
+		@include media(">=tablet") {
+			span {
+				font-size: 1.8rem;
+			}
+		}
+		@include media(">=desktop") {
+			span {
+				font-size: 2.4rem;
+			}
+		}
+	}
+	.js-input-phone {
+		@include media(">=phone-lg") {
+			font-size: 1.6rem;
+			height: 30px;
+		}
+
+		@include media(">=widescreen-lg") {
+			padding-left: 2rem;
+		}
+	}
+}
+
+.formDevelop.developPage {
+	padding-bottom: 5.5rem;
+
+	@include media('>=395px') {
+		padding-bottom: 3.5rem;
+	}
+	
+	@include media('>=widescreen-lg') {
+		padding-bottom: 23.5rem;
+	}
+
+	.formDevSec-Inner .title__h2 {
+		margin-bottom: 1rem;
+
+		@include media('>=phone-lg') {
+			font-size: 2.5rem;
+		}
+		@include media('>=tablet') {
+			font-size: 3.6rem;
+		}
+		@include media('>=widescreen-lg') {
+			font-size: 5.6rem;
+			font-family: $MazzardHBold;
+			margin-bottom: 4rem;
+		}
+	}
+	.formDevSec-Inner {
+
+		@include media('>=widescreen-lg') {
+			padding-bottom: 3rem;
+		}
+
+		input {
+
+			@include media('>=phone-lg') {
+				flex-basis: 45%;
+				font-size: 1.4rem;
+				height: 25px;
+			}
+
+			@include media('>=desktop') {
+				font-size: 1.8rem;
+				height: 50px;
+				flex-basis: 62%;
+			}
+
+			@include media('>=widescreen-lg') {
+				font-size: 2.4rem;
+				height: 70px;
+				flex-basis: 52%;
+				padding-left: 2rem;
+			}
+		}
+	}
+
+	.formDevelop__text span {
+		@include media('>=phone-lg') {
+			font-size: 1.6rem;
+		}
+		@include media('>=desktop') {
+			font-size: 2.4rem;
+		}
+	}
+
+	.formDevelop__wrapper {
+		.button-more {
+			flex-basis: 50%;
+			text-align: left;
+			padding-left: 1rem;
+			font-size: 1rem;
+			padding-right: 2rem;
+
+			@include media('>=phone-lg') {
+				flex-basis: 35%;
+				font-size: 1.4rem;
+				height: 25px;
+			}
+			@include media('>=desktop') {
+				font-size: 1.8rem;
+				height: 50px;
+			}
+			@include media('>=widescreen-lg') {
+				font-size: 2.4rem;
+				height: 70px;
+				margin-left: 4rem;
+				padding-left: 2rem;
+				padding-right: 2.7rem;
+				flex-basis: 29%;
+			}
+			&:after {
+				height: 18px;
+				top: 6px;
+				right: 7px;
+				width: 11px;
+
+				@include media('>=phone-lg') {
+					top: 7px;
+				}
+
+				@include media('>=desktop') {
+					height: 30px;
+					top: 10px;
+				}
+				@include media('>=widescreen-lg') {
+					height: 40px;
+					top: 18px;
+					right: -3px;
+				}
+			}
+		}
+	}
+	.formDevelop__inner {
+		@include media('>=widescreen-lg') {
+			min-width: 784px;
+		}
+	}
+
+	.formDevelop__imageWrapper video {
+		
+		@include media('>=widescreen-lg') {
+			width: 320px;
+			margin-top: -30px;
+		}
+	}
+
+	.mainForm-polite-link:visited {
+		color: $black;
+	}
+}
+

@@ -1,0 +1,44 @@
+mixin icon(viewBox, width, height, id)
+    svg(viewBox=viewBox, width=width, height=height)
+        use(xlink:href=id)
+
+mixin picture(alt, type, path, path2x)
+    picture
+        source(type=typesWebp , media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+        source(type=typesWebp , media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
+        img(src=path + jpg, loading="lazy", decoding="async", alt=alt)
+
+mixin pictureClassName(className, alt, type, path, path2x, loading='', decoding='')
+    picture
+        source(type=typesWebp , media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+        source(type=typesWebp , media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
+        img(class=className src=path + jpg, loading=loading, decoding=decoding, alt=alt)
+
+mixin pictureClassNamePng(className, alt, type, path, path2x, loading='lazy')
+    picture
+        source(type=typesWebp , media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+        source(type=typesWebp , media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
+        img(class=className src=path + png, loading=loading, decoding="async", alt=alt)
+
+mixin picturePNG(alt, type, path, path2x)
+    picture
+        source(type=typesWebp , media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+        source(type=typesWebp , media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
+        img(src=path + png, loading="lazy", decoding="async", alt=alt)
+
+mixin swiperPicturePNG(alt, type, path, path2x)
+    picture
+        source(type=typesWebp , media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+        source(type=typesWebp , media=mediaArr[1], srcset=(path  + webp + ' 1x' + ', ' + path2x  + webp + ' 2x' ))
+        img(class=swiperLazy data-src=path + png, data-srcset=path2x + png + '1x', alt=alt)
+
+mixin logo(alt, type, path, path2x)
+    picture
+        if (logoMedia == 0)
+            source(type=typesWebp , media=mediaArr[0], srcset=(path + webp + ' 1x' + ', ' + path2x + webp + ' 2x' ))
+            source(media=mediaArr[0], srcset=(path + png + ' 1x' + ', ' + path2x + png + ' 2x' ))
+
+        if jpgType
+            img(src=path + jpg,  srcset=(path + jpg + ' 1x' + ', ' + path2x + jpg + ' 2x' ), loading="lazy", decoding="async", alt=alt)
+        else
+            img(src=path + png, loading="lazy", decoding="async", alt=alt)

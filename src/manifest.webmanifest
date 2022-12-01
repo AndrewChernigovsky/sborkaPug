@@ -1,0 +1,14 @@
+{
+	"icons": [
+	  { "src": "images/icons/favicons/favicon16x16.png", "type": "image/png", "sizes": "16x16" },
+	  { "src": "images/icons/favicons/favicon32x32.png", "type": "image/png", "sizes": "32x32" },
+	  { "src": "images/icons/favicons/favicon64x64.png", "type": "image/png", "sizes": "64x64" },
+	  { "src": "images/icons/favicons/favicon72x72.png", "type": "image/png", "sizes": "72x72" },
+	  { "src": "images/icons/favicons/favicon96x96.png", "type": "image/png", "sizes": "96x96" },
+	  { "src": "images/icons/favicons/favicon120x120.png", "type": "image/png", "sizes": "120x120" },
+	  { "src": "images/icons/favicons/favicon144x144.png", "type": "image/png", "sizes": "144x144" },
+	  { "src": "images/icons/favicons/favicon180x180.png", "type": "image/png", "sizes": "180x180" },
+	  { "src": "images/icons/favicons/favicon196x196.png", "type": "image/png", "sizes": "196x196" },
+	  { "src": "images/icons/favicons/favicon512x512.png", "type": "image/png", "sizes": "512x512" }
+	]
+  }

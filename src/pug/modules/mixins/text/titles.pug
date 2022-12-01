@@ -1,0 +1,18 @@
+mixin h1(text, className)
+    if(className)
+        h1(class=(titleDefault+titleDefault__H1+className))= text
+    else  
+        h1(class=(titleDefault+titleDefault__H1))= text
+
+mixin h2(text, className)
+    if(className)
+        h2(class=(titleDefault+titleDefault__H2+className))= text
+    else  
+        h2(class=(titleDefault+titleDefault__H2))= text
+
+mixin h3(text, className)
+    if(className)
+        h3(class=(titleDefault+titleDefault__H3+className))= text
+    else  
+        h3(class=(titleDefault+titleDefault__H3))= text
+
