@@ -81,13 +81,21 @@ requireTask(`${gulpConfig.task.copyFolders}`, `./${gulpConfig.folder.tasks}/`, {
     foldersToCopy: gulpConfig.getPathesToCopy(),
 });
 
+// Базовый скрипт с библиотеками
+requireTask(`${gulpConfig.task.buildCustomJs}`, `./${gulpConfig.folder.tasks}/`, {
+    src: gulpConfig.folder.src,
+    dest: gulpConfig.folder.build,
+    mainJs: gulpConfig.file.mainJs,
+    checkProduction: true,
+  });
+
 // Наблюдение всех папок и файлов
 requireTask(`${gulpConfig.task.browserSync}`, `./${gulpConfig.folder.tasks}/`, {
     mainHtml: gulpConfig.file.mainHtml,
     browserSync,
-  });
-
-requireTask(
+ });
+  
+ requireTask(
     `${gulpConfig.task.watch}`,
     `./${gulpConfig.folder.tasks}/`,
     {
@@ -96,22 +104,22 @@ requireTask(
       imageExtensions: gulpConfig.imageExtensions,
       browserSync,
       tasks: {
+        esLint: gulpConfig.task.esLint,
+        ttf2woff: gulpConfig.task.ttf2woff,
+        ttf2woff2: gulpConfig.task.ttf2woff2,
         buildCustomJs: gulpConfig.task.buildCustomJs,
         buildSass: gulpConfig.task.buildSass,
+        buildSassCustom: gulpConfig.task.buildSassCustom,
         fileIncludepug: gulpConfig.task.fileIncludepug,
         copyFolders: gulpConfig.task.copyFolders,
+        svgSprite: gulpConfig.task.svgSprite,
+        copyPHP: gulpConfig.task.copyPHP,
+        imageResize: gulpConfig.task.imageResize,
+        developJS: gulpConfig.task.developJS,
       },
     },
     false
-);
-
-// Базовый скрипт с библиотеками
-requireTask(`${gulpConfig.task.buildCustomJs}`, `./${gulpConfig.folder.tasks}/`, {
-    src: gulpConfig.folder.src,
-    dest: gulpConfig.folder.build,
-    mainJs: gulpConfig.file.mainJs,
-    checkProduction: true,
-  });
+  );
 
 // ТАСКИ ЗАДАЧИ СКРИПТЫ
 // ТАСКИ ЗАДАЧИ СКРИПТЫ
@@ -121,16 +129,23 @@ requireTask(`${gulpConfig.task.buildCustomJs}`, `./${gulpConfig.folder.tasks}/`,
 gulp.task(
     'default',
     gulp.series(
+
 		gulpConfig.task.cleanBuild,
 		gulpConfig.task.fileIncludepug,
+
 		gulp.parallel(
 			gulpConfig.task.buildStylesVendors,
 			gulpConfig.task.buildSass,
 		),
+
 		gulpConfig.task.imageMin,
 		gulpConfig.task.imageWebP,
 		gulpConfig.task.copyFolders,
-		gulp.parallel(gulpConfig.task.browserSync, gulpConfig.task.watch),
+
+		gulp.parallel(
+			gulpConfig.task.browserSync, 
+			gulpConfig.task.watch,
+		),
     )
 );
 
